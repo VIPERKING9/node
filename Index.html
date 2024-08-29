@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES ENCRYPTION/DECRYPTION AND RSA KEY PAIR GENERATOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue; /* Change background color to light blue */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        select {
+            font-size: 18px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>AES ENCRYPTION/DECRYPTION AND RSA KEY PAIR GENERATOR</h4>
+        
+        <div>
+            <label for="inputText">Input Text:</label><br>
+            <textarea id="inputText" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <button onclick="encryptAES()">Encrypt with AES</button>
+            <button onclick="decryptAES()">Decrypt with AES</button>
+        </div>
+
+        <div>
+            <label for="aesOutput">AES Output:</label><br>
+            <textarea id="aesOutput" rows="4" cols="50" readonly></textarea>
+        </div>
+        <hr>
+
+        <h4>RSA KEY GENERATOR</h4>
+        <div>
+            <label for="keyLength">Key Length:</label>
+            <select id="keyLength">
+                <option value="1024">1024</option>
+                <option value="2048">2048</option>
+            </select>
+            <button onclick="generateKeyPair()">Generate key pair</button>
+        </div>
+
+        <div>
+            <label for="privateKey">Private key:</label><br>
+            <textarea id="privateKey" rows="4" cols="50" readonly></textarea>
+        </div>
+
+        <div>
+            <label for="publicKey">Public key:</label><br>
+            <textarea id="publicKey" rows="4" cols="50" readonly></textarea>
+        </div>
+    </div>
+
+    <!-- Load JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.1.0/jsencrypt.min.js"></script>
+    <!-- Load custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES ENCRYPTION/DECRYPTION AND RSA KEY PAIR GENERATOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue; /* Background color for the entire page */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f0f0f0; /* Light gray background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: #e0e0e0; /* Slightly darker gray for text area */
+        }
+        
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: 2px solid #0056b3;
+            border-radius: 5px;
+            background-color: #007BFF; /* Blue background */
+            color: #fff; /* White text */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+        
+        select {
+            font-size: 18px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e0e0e0; /* Gray background for select dropdown */
+        }
+    </style>
+</head>
+<body>
+   
