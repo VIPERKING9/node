@@ -32,4 +32,5 @@ Click "Generate key pair" to produce and display a new RSA public and private ke
 Technical Details
 AES Encryption/Decryption: Utilizes the CryptoJS library for performing AES operations. The AES key used is a simple static key for demonstration purposes.
 RSA Key Generation: Utilizes the JSEncrypt library to generate RSA key pairs and perform encryption/decryption.
+
 PUBLIC URL: http://127.0.0.1:5500/Index.html
