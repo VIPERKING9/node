@@ -17,20 +17,48 @@ Generate RSA Key Pair: Users can generate a new RSA key pair with a choice of ke
 Display Keys: The generated public and private keys are displayed in separate text areas.
 RSA is an asymmetric encryption algorithm, which uses a pair of keys: a public key for encryption and a private key for decryption. This tool facilitates the creation of RSA key pairs for securing data or verifying identities.
 
+Installation
 
-How to Use
+Step 1. Clone the repository:
+https://github.com/VIPERKING9/node.git
+Step 2. open the encryption directory on the code editor terminal using
+ cd encryption-app
+ Step 3. Install dependencies:
+  npm install
+  step 4. Run the application:
+   npm start
+   Step 5. Open in browser:
+   Navigate to the browser:http://127.0.0.1:5500/Index.html
 
-AES Encryption/Decryption:
+   Usage
 
-Enter your plaintext in the "Input Text" area.
-Click "Encrypt with AES" to obtain the encrypted output.
-To decrypt, paste the encrypted text into the "AES Output" area and click "Decrypt with AES".
-RSA Key Generation:
+   Encrypting a Message:
 
-Select the desired key length from the dropdown menu.
-Click "Generate key pair" to produce and display a new RSA public and private key.
-Technical Details
-AES Encryption/Decryption: Utilizes the CryptoJS library for performing AES operations. The AES key used is a simple static key for demonstration purposes.
-RSA Key Generation: Utilizes the JSEncrypt library to generate RSA key pairs and perform encryption/decryption.
+. Enter your message in the text area.
 
-PUBLIC URL: http://127.0.0.1:5500/Index.html
+. Click the "Encrypt" button.
+
+The encrypted message will be displayed in the output field.
+
+
+Decrypting a Message:
+. Enter the encrypted message and AES key.
+
+. Click the "Decrypt" button.
+
+The decrypted message will be displayed in the output field.
+
+Contributing:
+Contributions are open Please open an issue or submit a new pull request for any improvements or suggestions.
+
+
+   Steps to Contribute
+Step 1. Fork the repository.
+
+Step 2. Create a new branch (git checkout -b feature-branch).
+
+step 3. Make your changes and commit them (git commit -m 'Add new feature').
+
+step 4. Push to the branch (git push origin feature-branch).
+
+Step 5. Open a pull request.
