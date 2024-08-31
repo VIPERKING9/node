@@ -20,14 +20,32 @@ RSA is an asymmetric encryption algorithm, which uses a pair of keys: a public k
 Installation
 
 Step 1. Clone the repository:
+
+
 https://github.com/VIPERKING9/node.git
+
+
 Step 2. open the encryption directory on the code editor terminal using
+
+
  cd encryption-app
+
+ 
  Step 3. Install dependencies:
+
+ 
   npm install
+
+  
   step 4. Run the application:
+
+  
    npm start
+
+   
    Step 5. Open in browser:
+
+   
    Navigate to the browser:http://127.0.0.1:5500/Index.html
 
    Usage
